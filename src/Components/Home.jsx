@@ -83,7 +83,7 @@ function Home() {
          {
             skills?.map((skill)=>(
                 <div key={skill._id}>
-                    <img  src ={ require(`https://mernbackend-vhvd.onrender.com/public/${skill.image}`)} width="50px" alt="" />
+                    <img  src ="https://mernbackend-vhvd.onrender.com/public/1709400398512_goat0000.jpg" width="50px" alt="" />
                      <div className="skdesc">{skill.name}</div></div>
             ))
          }
