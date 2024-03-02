@@ -1,0 +1,433 @@
+.parentdev {
+    min-height: 550px;
+    display: grid;
+    grid-template-rows: auto 1fr;
+}
+
+.next {
+    right: 5px;
+}
+
+.prev {
+    left: 5px;
+}
+
+
+/**********************************************/
+
+.tool1 .toolinf:nth-child(1) .toolname1,
+.tool1 .toolinf:nth-child(2) .toolname1,
+.tool1 .toolinf:nth-child(3) .toolname1,
+.tool1 .toolinf:nth-child(4) .toolname1 {
+    right: 60px;
+}
+
+.tool1 .toolinf:nth-child(1) .toolname1::before,
+.tool1 .toolinf:nth-child(2) .toolname1::before,
+.tool1 .toolinf:nth-child(3) .toolname1::before,
+.tool1 .toolinf:nth-child(4) .toolname1::before {
+    content: "";
+    position: absolute;
+    border: 10px solid;
+    top: calc(50% - 10px);
+    right: -20px !important;
+    border-color: transparent transparent transparent #00000082;
+}
+
+
+/**********************************************/
+
+.prev,
+.next {
+    background: #2f234f47;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: inset -3px -3px 5px #0000002e, inset 3px 3px 6px #534f4f4a;
+    border-radius: 6px;
+    justify-content: center;
+    width: 30px;
+    border: none;
+    color: var(--three);
+    top: calc(50% - 15px);
+    height: 30px;
+    cursor: pointer;
+}
+
+.prev:hover,
+.next:hover {
+    background: #ff595a61;
+}
+
+.active {
+    display: block !important;
+}
+
+.product-slide {
+    display: none;
+}
+
+.projects1,
+.projects2 {
+    position: relative;
+    justify-self: center;
+    width: 780px;
+    height: fit-content;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.projects2 {
+    display: none;
+    width: fit-content;
+}
+
+.pro:last-child .betwenpro {
+    display: none;
+}
+
+.betwenpro {
+    width: 350px;
+    height: 3px;
+    border-radius: 6px;
+    position: absolute;
+    bottom: -29px;
+    background: var(--purp);
+}
+
+.betwenpro::before {
+    width: 50px;
+    height: 50px;
+    content: "HO";
+    position: absolute;
+    background: var(--white);
+    border: 2px solid var(--purp);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--three);
+    font-size: 20px;
+    font-weight: bolder;
+    top: calc(50% - 25px);
+    left: calc(50% - 25px);
+    border-radius: 50%;
+}
+
+.tool1 {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+.tool1 .toolinf:nth-child(1) {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+.tool1 .toolinf:nth-child(2) {
+    position: absolute;
+    right: 0;
+    bottom: 50px;
+}
+
+.tool1 .toolinf:nth-child(3) {
+    position: absolute;
+    right: 0;
+    bottom: 100px;
+}
+
+.tool1 .toolinf:nth-child(4) {
+    position: absolute;
+    right: 0;
+    bottom: 150px;
+}
+
+.tool1 .toolinf:nth-child(5) {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+.tool1 .toolinf:nth-child(6) {
+    position: absolute;
+    left: 0;
+    bottom: 50px;
+}
+
+.tool1 .toolinf:nth-child(7) {
+    position: absolute;
+    left: 0;
+    bottom: 100px;
+}
+
+.tool1 .toolinf:nth-child(8) {
+    position: absolute;
+    left: 0;
+    bottom: 150px;
+}
+
+.tool1 .toolinf {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    position: relative;
+}
+
+.toolname1 {
+    position: absolute;
+    background: #00000082;
+    color: var(--three);
+    text-shadow: 1px 1px 1px black;
+    width: fit-content;
+    height: fit-content;
+    min-width: 50px;
+    text-align: center;
+    padding: 1px 4px;
+    border-radius: 2px;
+    display: none;
+    font-size: 13px;
+}
+
+.tool1 .toolinf:nth-child(5) .toolname1,
+.tool1 .toolinf:nth-child(6) .toolname1,
+.tool1 .toolinf:nth-child(7) .toolname1,
+.tool1 .toolinf:nth-child(8) .toolname1 {
+    left: 60px;
+}
+
+.tool1 .toolinf:nth-child(5) .toolname1::before,
+.tool1 .toolinf:nth-child(6) .toolname1::before,
+.tool1 .toolinf:nth-child(7) .toolname1::before,
+.tool1 .toolinf:nth-child(8) .toolname1::before {
+    content: "";
+    position: absolute;
+    border: 10px solid;
+    top: calc(50% - 10px);
+    left: -20px;
+    border-color: transparent #00000082 transparent transparent;
+}
+
+.toolinf:hover .toolname1 {
+    display: block;
+}
+
+.prodesc {
+    width: 500px;
+    color: var(--three);
+    text-align: center;
+    text-shadow: 1px 1px 1px var(--white);
+}
+
+.pro {
+    height: 300px;
+    width: 700px;
+    position: relative;
+    border-radius: 5px;
+    margin: 30px 25px;
+    border-radius: 10px;
+    box-shadow: inset -3px -3px 5px #0000002e, inset 3px 3px 6px #534f4f4a;
+    overflow: hidden;
+}
+
+.proinf {
+    height: 100%;
+    background: linear-gradient(to top, var(--white) 1%, transparent 99%);
+    display: grid;
+    grid-template-rows: 1fr 170px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.divmr {
+    display: grid;
+    justify-items: center;
+}
+
+.namepro {
+    text-transform: uppercase;
+    color: var(--three);
+    font-size: 25px;
+    text-shadow: 1px 1px 1px var(--white);
+    letter-spacing: 1.5px;
+}
+
+.btnmr {
+    width: fit-content;
+    height: fit-content;
+    border-radius: 50px;
+    padding: 4px 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    position: relative;
+    overflow: hidden;
+    transition: 0.2s ease-in-out;
+    box-shadow: inset -3px -3px 5px #0000002e, inset 3px 3px 6px #534f4f4a;
+    cursor: pointer;
+    ;
+}
+
+.btnmr span,
+.btnmr a {
+    z-index: 1;
+    text-decoration: none;
+    color: var(--three) !important;
+    font-size: 14px;
+    text-shadow: 1px 1px 1px black;
+}
+
+.btnmr::before {
+    content: "";
+    position: absolute;
+    transition: 0.5s ease-in-out;
+    width: 0;
+    background: var(--purp);
+    transform: rotate(45deg);
+    height: 300%;
+    z-index: 0;
+}
+
+.btnmr:hover::before {
+    width: 150%;
+}
+
+.btnmr:hover a {
+    color: var(--white);
+}
+
+.divbac {
+    width: 100%;
+    border-radius: 3px;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 10px;
+    position: absolute;
+    z-index: -1;
+}
+
+
+/*/////////////////////////*/
+
+.prtit {
+    display: grid;
+    min-height: 150px;
+    align-content: space-evenly;
+    justify-items: center;
+}
+
+.titdiv {
+    max-width: 500px;
+    text-transform: uppercase;
+    font-size: 30px;
+    font-weight: 900;
+    color: var(--purp);
+    text-shadow: 2px 2px 2px black;
+}
+
+.paragdiv {
+    max-width: 500px;
+    text-align: center;
+    font-size: 15px;
+    font-family: 'JF Flat Regular';
+    color: var(--three);
+    /*font-weight: 800;*/
+    text-transform: capitalize;
+    text-shadow: 1px 1px 1px black;
+    font-style: italic;
+    padding: 0 15px;
+}
+
+.prev:focus,
+.next:focus {
+    outline: none;
+}
+
+@media (max-width: 410px) {
+    .pro {
+        margin: 30px 10px;
+    }
+}
+
+@media (max-width: 800px) {
+    .projects2 {
+        display: flex;
+    }
+    .projects1 {
+        display: none;
+    }
+    .pro {
+        width: 350px;
+        height: 160px;
+        overflow: visible;
+    }
+    .prodesc {
+        font-size: 10px;
+        width: 250px;
+    }
+    .namepro {
+        font-size: 16px;
+    }
+    .proinf {
+        grid-template-rows: 1fr 130px;
+    }
+    .divbac {
+        background-size: 350px 160px;
+        border-radius: 10px;
+    }
+    .toolinf {
+        width: 30px !important;
+        height: 30px !important;
+    }
+    .tool1 .toolinf:nth-child(2) {
+        position: absolute;
+        right: 0;
+        bottom: 30px;
+    }
+    .tool1 .toolinf:nth-child(3) {
+        position: absolute;
+        right: 0;
+        bottom: 60px;
+    }
+    .tool1 .toolinf:nth-child(4) {
+        position: absolute;
+        right: 0;
+        bottom: 90px;
+    }
+    .tool1 .toolinf:nth-child(6) {
+        position: absolute;
+        left: 0;
+        bottom: 30px;
+    }
+    .tool1 .toolinf:nth-child(7) {
+        position: absolute;
+        left: 0;
+        bottom: 60px;
+    }
+    .tool1 .toolinf:nth-child(8) {
+        position: absolute;
+        left: 0;
+        bottom: 90px;
+    }
+    .tool1 .toolinf:nth-child(5) .toolname1,
+    .tool1 .toolinf:nth-child(6) .toolname1,
+    .tool1 .toolinf:nth-child(7) .toolname1,
+    .tool1 .toolinf:nth-child(8) .toolname1 {
+        left: 50px;
+    }
+    .tool1 .toolinf:nth-child(1) .toolname1,
+    .tool1 .toolinf:nth-child(2) .toolname1,
+    .tool1 .toolinf:nth-child(3) .toolname1,
+    .tool1 .toolinf:nth-child(4) .toolname1 {
+        right: 50px;
+    }
+}

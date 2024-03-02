@@ -1,0 +1,202 @@
+.divpar {
+    min-height: calc(100vh - 120px);
+    display: grid;
+    grid-template-columns: 50% 50%;
+    position: relative;
+}
+
+.divquist {
+    position: relative;
+    height: fit-content;
+    display: grid;
+    grid-template-rows: 200px auto auto;
+}
+
+.quist span {
+    color: var(--purp);
+    /* text-transform: capitalize;*/
+}
+
+.quist {
+    text-transform: uppercase;
+    font-size: 30px;
+    height: fit-content;
+    font-weight: bolder;
+    align-self: self-end;
+    text-shadow: 1px 1px 1px black;
+    color: var(--three);
+}
+
+.ansr {
+    width: 95%;
+    text-transform: capitalize;
+    max-width: 600px;
+    height: fit-content;
+    align-self: self-start;
+    color: var(--three);
+    justify-self: center;
+}
+
+
+/*************/
+
+.exper {
+    display: grid;
+    grid-template-rows: 100px 1fr;
+    place-items: center;
+}
+
+.tito {
+    background: var(--white);
+    font-size: 25px;
+    color: var(--purp);
+    font-weight: bolder;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 2px black;
+    box-shadow: inset -3px -3px 5px #0000002e, inset 3px 3px 6px #534f4f4a;
+    border-radius: 10px;
+    padding: 5px 20px;
+    align-self: flex-end;
+}
+
+.bodyexp {
+    padding: 20px 10px;
+    margin-bottom: 20px;
+}
+
+.depl {
+    width: 270px;
+    height: 170px;
+    margin-top: 20px;
+    box-shadow: inset -3px -3px 5px #0000002e, inset 3px 3px 6px #534f4f4a;
+    border-radius: 10px;
+    display: grid;
+    align-items: center;
+    grid-template-rows: 50px 40px 25px 35px;
+    position: relative;
+    overflow: hidden;
+    padding: 10px;
+}
+
+.deplbef {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background: beige;
+    right: 0;
+    top: 0;
+    border-radius: 0 0 0 50%;
+    display: grid;
+    place-items: center;
+}
+
+.depl>div {
+    color: var(--three);
+    text-transform: capitalize;
+    justify-self: start;
+}
+
+.deptit {
+    color: var(--purp) !important;
+    padding-right: 34px;
+}
+
+.btnpr {
+    padding: 3px 8px !important;
+    justify-self: end !important;
+}
+
+.swal2-cancel {
+    padding: 5px 10px !important;
+}
+
+.swal2-actions {
+    margin: 0 !important;
+}
+
+.swall {
+    background: transparent !important;
+    grid-template-rows: 1fr 40px;
+    height: fit-content !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    align-items: center;
+    width: 100%;
+}
+
+.imgdp {
+    width: 90% !important;
+    max-width: 800px;
+}
+
+.workExpert {
+    width: 365px;
+    display: grid;
+    justify-self: center;
+    place-items: center;
+    margin-top: 50px;
+}
+
+.NoXp {
+    color: var(--three);
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.workbody,
+.workHead {
+    display: grid;
+    grid-template-columns: 145px 145px 75px;
+    background: var(--white);
+}
+
+.wTable {
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.workHead>div,
+.workbody>div {
+    color: var(--three);
+    font-size: 17px;
+    text-shadow: 1px 1px 1px black;
+    padding-left: 7px !important;
+    padding: 10px 0px;
+    box-shadow: inset -3px -3px 5px #0000002e, inset 3px 3px 6px #534f4f4a;
+}
+
+.workbody>div {
+    font-size: 13px;
+}
+
+
+/*****************************************************/
+
+@media (max-width: 800px) {
+    .divpar {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto;
+    }
+    .tito {
+        font-size: 23px;
+        padding: 10px 20px;
+        align-self: flex-end;
+    }
+    .exper {
+        grid-template-rows: 100px 1fr;
+    }
+    .divquist {
+        grid-template-rows: 125px 1fr;
+    }
+    .quist {
+        width: 100%;
+        padding: 0;
+        text-align: center;
+        justify-self: center;
+    }
+    .ansr {
+        width: 100%;
+        padding: 5px 20px;
+        text-align: justify;
+    }
+}

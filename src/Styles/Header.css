@@ -1,0 +1,229 @@
+@font-face {
+    font-family: 'JF Flat Regular';
+    src: url(../Font/JFFlatRegular.ttf);
+    /* Adjust if necessary */
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'JF Flat Regular';
+    background-color: #fcfcfc;
+}
+
+header {
+    height: 60px;
+    z-index: 20;
+    position: relative;
+}
+
+.containerr {
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    height: fit-content;
+    height: 60px;
+    /*width: calc(100% - 40px);*/
+    /*grid-template-columns: 162px auto 103px;*/
+    justify-content: space-between;
+    align-items: center;
+    background: var(--white);
+}
+
+.navbarr {
+    height: 60px;
+    position: fixed;
+    width: 100%;
+    top: -1px;
+}
+
+.menu-icon {
+    display: none;
+}
+
+.nav-elements ul {
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    align-items: center;
+    height: 60px;
+    margin-bottom: 0 !important;
+}
+
+.nav-elements ul li:not(:last-child) {
+    margin-right: 60px;
+}
+
+.nav-elements ul a {
+    font-size: 16px;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.nav-elements ul a.active {
+    color: var(--purp);
+    font-weight: 900;
+    position: relative;
+}
+
+.nav-elements ul a.active::after {
+    content: "";
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--purp);
+}
+
+.img1 {
+    width: 45px;
+}
+
+.img2 {
+    width: 120px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+@media (max-width: 800px) {
+    .menu-icon {
+        display: block;
+        cursor: pointer;
+    }
+    .nav-elements {
+        position: absolute;
+        right: 0;
+        top: 60px;
+        background-color: var(--white);
+        width: 0px;
+        height: calc(100vh - 60px);
+        transition: all 0.3s ease-in;
+        overflow: hidden;
+    }
+    .nav-elements.active {
+        width: 270px;
+    }
+    .nav-elements ul {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .nav-elements ul li {
+        margin-right: unset;
+        margin-top: 22px;
+        margin-left: 10px;
+    }
+    /* .lgdiv {
+        order: 2;
+    }
+    .menu-icon {
+        order: 3;
+    }
+    .cvbtn {
+        order: 1;
+    }
+    .container {
+        grid-template-columns: 103px auto 40px;
+    }*/
+}
+
+.nav-elements ul li a {
+    color: var(--three);
+}
+
+
+/****************************************************/
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+/* Icon 1 */
+
+#nav-icon1 {
+    width: 40px;
+    height: 35px;
+    position: relative;
+    transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: .5s ease-in-out;
+    -moz-transition: .5s ease-in-out;
+    -o-transition: .5s ease-in-out;
+    transition: .5s ease-in-out;
+    cursor: pointer;
+}
+
+#nav-icon1 span {
+    display: block;
+    position: absolute;
+    height: 5px;
+    width: 100%;
+    background: #ff595a;
+    border-radius: 9px;
+    opacity: 1;
+    left: 0;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: .25s ease-in-out;
+    -moz-transition: .25s ease-in-out;
+    -o-transition: .25s ease-in-out;
+    transition: .25s ease-in-out;
+}
+
+#nav-icon1 span:nth-child(1) {
+    top: 0px;
+}
+
+#nav-icon1 span:nth-child(2) {
+    top: 12px;
+}
+
+#nav-icon1 span:nth-child(3) {
+    top: 24px;
+}
+
+#nav-icon1.open span:nth-child(1) {
+    top: 12px;
+    -webkit-transform: rotate(135deg);
+    -moz-transform: rotate(135deg);
+    -o-transform: rotate(135deg);
+    transform: rotate(135deg);
+}
+
+#nav-icon1.open span:nth-child(2) {
+    opacity: 0;
+    left: -60px;
+}
+
+li {
+    cursor: pointer;
+}
+
+#nav-icon1.open span:nth-child(3) {
+    top: 12px;
+    -webkit-transform: rotate(-135deg);
+    -moz-transform: rotate(-135deg);
+    -o-transform: rotate(-135deg);
+    transform: rotate(-135deg);
+}
+
+
+/*****************/
+
+.cvbtn {
+    background: var(--purp);
+    color: var(--white);
+    font-weight: 900;
+    padding: 6px 10px;
+    border-radius: 10px;
+}
