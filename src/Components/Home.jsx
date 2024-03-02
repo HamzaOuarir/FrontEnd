@@ -43,7 +43,7 @@ function Home() {
 <div className="zwa93"></div>
 </div></div>*/
   )
-  return (
+ return (
     <div>
         <Loading dta={skills}/>
       <ParticlesBackground />
@@ -81,13 +81,11 @@ function Home() {
         <div className="parg">We've mastered the highlighted skills and maintain an ongoing commitment to learning new abilities and techniques. while our dedication to acquiring modern skills and technologies remains constant </div>
         <div className="stcontainer">
          {
-           skills?.map((skill)=>(
-    <div key={skill._id}>
-      
-        <div className="skdesc">{skill.name}</div>
-    </div>
-))
-
+            skills?.map((skill)=>(
+                <div key={skill._id}>
+                    <img  src ={ require(`./images/${skill.image}`)} width="50px" alt="" />
+                     <div className="skdesc">{skill.name}</div></div>
+            ))
          }
         </div>
 
