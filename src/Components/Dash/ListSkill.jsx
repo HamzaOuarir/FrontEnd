@@ -28,6 +28,10 @@ function ListSkill() {
 
 
     const delSkill = (skillId, skillName) => {
+        const token = localStorage.getItem('token');
+        if (!token) {
+            throw new Error('Token not found');
+        }
         Swal.fire({
             title: "Are you sure?",
             text: "You won't be delete " + skillName + "!",
@@ -39,6 +43,7 @@ function ListSkill() {
         }).then(async (result) => {
             if (result.isConfirmed) {
                 try {
+                     axios.defaults.headers.common['Authorization'] = `Bearer ${token}`;
                     const response = await axios.delete(
                         `https://mernbackend-vhvd.onrender.com/api/skills/${skillId}`
                     );
