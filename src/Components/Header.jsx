@@ -53,7 +53,7 @@ function Header() {
     </div>
   );
   /*******************************/
-  const url = "http://localhost:3000/CV.pdf";
+  const url = "https://frontend-q1ox.onrender.com/CV.pdf";
   const downloadFileAtURL = () => {
     const atg = document.createElement("a");
     atg.href = url;
