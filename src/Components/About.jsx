@@ -35,7 +35,7 @@ import axios from "axios";
     const showImgDep = (urlImg) => {
         Swal.fire({ 
             html:
-                '<img className="imgdp" style="width: 90%;max-width: 800px;" src="'+ {`https://mernbackend-vhvd.onrender.com/public/${urlImg}`} +
+                '<img className="imgdp" style="width: 90%;max-width: 800px;" src="https://mernbackend-vhvd.onrender.com/public/'+urlImg +
                 '" alt="gggg">',
             showConfirmButton: false,
             showCancelButton: true,
