@@ -59,10 +59,7 @@ function Projects() {
                             <div className="pro">
                                 <div className="divbac">
                                     <img
-                                        src={
-                                            require(`./images/${proj.image}`)
-                                            
-                                        }
+                                        src={`https://mernbackend-vhvd.onrender.com/public/${proj.image}`} 
                                         alt=""
                                         width="100%"
                                         height="100%"
@@ -76,7 +73,7 @@ function Projects() {
                                             
                                                 return <div key={tool.name} className="toolinf">
                                                     <img
-                                                        src ={ require(`./images/${tool.image}`)} 
+                                                        src ={`https://mernbackend-vhvd.onrender.com/public/${tool.image}`} 
                                                         width="70%"
                                                         alt=""
                                                     />
