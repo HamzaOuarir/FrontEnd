@@ -17,8 +17,7 @@ function Login() {
             // Redirect to the home page if a token exists
             window.location.href = '/';
         }
-    }, []); // Empty dependency array to run this effect once when the component mounts
-
+    }, []); 
 
    const handleLogin = async (e) => {
         e.preventDefault();
